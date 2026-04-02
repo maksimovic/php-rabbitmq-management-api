@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace RabbitMq\ManagementApi;
 
 use Http\Client\Common\Plugin\AuthenticationPlugin;
@@ -23,7 +25,7 @@ class Client
     protected string $baseUrl;
 
     public function __construct(
-        ClientInterface $client = null,
+        ?ClientInterface $client = null,
         string $baseUrl = 'http://localhost:15672',
         string $username = 'guest',
         string $password = 'guest'

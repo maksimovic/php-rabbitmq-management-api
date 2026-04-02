@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace RabbitMq\ManagementApi\Api;
 
 /**
@@ -72,7 +74,7 @@ class Binding extends AbstractApi
      * @param array|null $arguments
      * @return array
      */
-    public function create($vhost, $exchange, $queue, $routingKey = null, array $arguments = null)
+    public function create($vhost, $exchange, $queue, $routingKey = null, ?array $arguments = null)
     {
         $parameters = array();
 
@@ -105,7 +107,7 @@ class Binding extends AbstractApi
      * @param array|null $arguments
      * @return array
      */
-    public function createExchange($vhost, $source, $destination, $routingKey = null, array $arguments = null)
+    public function createExchange($vhost, $source, $destination, $routingKey = null, ?array $arguments = null)
     {
         $parameters = array();
 
